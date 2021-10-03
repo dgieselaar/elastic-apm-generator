@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "lib": [
+      "ESNext"
+    ],
+    "target": "ESNext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "types": [
+      "node",
+      "jest"
+    ],
+    "outDir": "./target",
+    "allowSyntheticDefaultImports": true
+  },
+  "include": [
+    "src",
+    "test"
+  ],
+  "exclude": [
+    "**/node_modules/**"
+  ]  
+}
