@@ -15,13 +15,13 @@ describe('output to elasticsearch', () => {
   it('properly formats @timestamp', () => {
     const doc = toElasticsearchOutput([event])[0] as any;
 
-    expect(doc['@timestamp']).toEqual('2020-12-31T23:00:00.000Z');
+    expect(doc._source['@timestamp']).toEqual('2020-12-31T23:00:00.000Z');
   });
 
   it('formats a nested object', () => {
     const doc = toElasticsearchOutput([event])[0] as any;
 
-    expect(doc.processor).toEqual({
+    expect(doc._source.processor).toEqual({
       event: 'transaction',
       name: 'transaction',
     });

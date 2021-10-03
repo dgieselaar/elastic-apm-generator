@@ -60,7 +60,7 @@ describe('simple trace', () => {
     const [transaction] = events;
 
     expect(transaction).toEqual({
-      '@timestamp': 1609455660000,
+      '@timestamp': 1609455600000,
       'agent.name': 'java',
       'event.outcome': 'success',
       'processor.event': 'transaction',
@@ -73,6 +73,7 @@ describe('simple trace', () => {
       'transaction.id': 'e9ece67cbacb52bf',
       'transaction.name': 'GET /api/product/list',
       'transaction.type': 'request',
+      'transaction.sampled': true,
     });
   });
 
@@ -80,7 +81,7 @@ describe('simple trace', () => {
     const [, span] = events;
 
     expect(span).toEqual({
-      '@timestamp': 1609455660050,
+      '@timestamp': 1609455600050,
       'agent.name': 'java',
       'event.outcome': 'success',
       'parent.id': 'e7433020f2745625',

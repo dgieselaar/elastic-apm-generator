@@ -60,6 +60,7 @@ export function getTransactionMetrics(events: Array<Fields>) {
     if (!metricset) {
       metricset = {
         ...key,
+        ['processor.event']: 'metric',
         'transaction.duration.histogram': {
           values: [],
           counts: [],

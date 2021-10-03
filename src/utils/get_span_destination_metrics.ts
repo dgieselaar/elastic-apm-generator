@@ -1,4 +1,4 @@
-import { pick, sortBy } from 'lodash';
+import { pick } from 'lodash';
 import moment from 'moment';
 import objectHash from 'object-hash';
 import { Fields } from '../entity';
@@ -30,6 +30,7 @@ export function getSpanDestinationMetrics(events: Array<Fields>) {
     let metricset = metricsets.get(id);
     if (!metricset) {
       metricset = {
+        ['processor.event']: 'metric',
         ...key,
         'span.destination.service.response_time.sum.us': 0,
         'span.destination.service.response_time.count': 0,

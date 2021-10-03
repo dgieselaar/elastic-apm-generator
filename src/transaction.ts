@@ -8,6 +8,7 @@ export class Transaction extends BaseSpan {
       ...fields,
       'processor.event': 'transaction',
       'transaction.id': generateEventId(),
+      'transaction.sampled': true,
     });
   }
   override children(...children: BaseSpan[]) {

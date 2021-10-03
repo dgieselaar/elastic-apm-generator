@@ -1,4 +1,5 @@
 export { service } from './service';
+export { timerange } from './timerange';
 export { getTransactionMetrics } from './utils/get_transaction_metrics';
 export { getSpanDestinationMetrics } from './utils/get_span_destination_metrics';
 export { getGoAgentDefaults } from './defaults/get_go_agent_defaults';

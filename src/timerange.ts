@@ -11,10 +11,10 @@ class Timerange {
     }
     const timestamps: number[] = [];
     while (now <= this.to) {
+      timestamps.push(...new Array<number>(repeated).fill(now));
       now = moment(now)
         .add(Number(args[1]), args[2] as any)
         .valueOf();
-      timestamps.push(...new Array<number>(repeated).fill(now));
     }
     return timestamps;
   }

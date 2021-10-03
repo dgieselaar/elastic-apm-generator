@@ -54,8 +54,8 @@ describe('transaction metrics', () => {
     );
 
     expect([first, second]).toEqual([
+      '2020-12-31T23:00:00.000Z',
       '2020-12-31T23:01:00.000Z',
-      '2020-12-31T23:02:00.000Z',
     ]);
   });
 

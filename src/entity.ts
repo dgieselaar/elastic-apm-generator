@@ -6,6 +6,7 @@ export type Fields = Partial<{
   'event.outcome': string;
   'event.ingested': number;
   'metricset.name': string;
+  'observer.version': string;
   'observer.version_major': number;
   'parent.id': string;
   'processor.event': string;
@@ -19,6 +20,7 @@ export type Fields = Partial<{
     values: number[];
     counts: number[];
   };
+  'transaction.sampled': true;
   'service.name': string;
   'service.environment': string;
   'service.node.name': string;
